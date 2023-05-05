@@ -10,15 +10,34 @@
       content="HTML, CSS, JavaScript, _REPLACE_WITH_KEYWORD_"
     />
     <meta name="author" content="_YOUR_NAME_" />
-    <link rel="stylesheet" href="/style.css" />
-    <!-- TODO: Import Javascript -->
-    <title>_REPLACE_SITE_NAME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet"/>
+    <script src="/js/app.js" defer></script>
+    <script src="/js/menu.js" defer></script>
+    <title>FastCars</title>
   </head>
   <body class="animate__animated animate__fadeIn">
-    <header class="l-header">
-      <h1>Home</h1>
+    <header>
+     <nav class="navbar">
+      <a class="logo" href="/index.html"><img src="/assets/logo.png"></a>
+      <a href="#" class="toggle-btn">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/list.html">Reviews</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+     </nav>
     </header>
-
     <main class="l-main">
       <section role="search"></section>
 
@@ -42,8 +61,21 @@
       </section>
     </main>
 
-    <footer class="l-footer">
-      <small>Created with ❤️ by _REPLACE_</small>
+    <footer>
+      <div class="footer-info">
+       <a href="/contact.html"><p class="footer-text">Contact us</p></a>
+       <a href="/about.html"><p class="footer-text">About</p></a>
+       <p class="footer-text">MØLLERPARKEN 4, 0459 OSLO</p>
+       <a href="#"><img class="footer-logo" src="/assets/logo.png" alt="wheel logo"></a>
+       <p class="footer-text">THIS WEBSITE WAS CREATED FOR EDUCATIONAL PURPOSES</p>
+       <p class="footer-text">SOCIAL MEDIA</p>
+       <i class="fa-solid fa-brands fa-facebook"></i>
+       <i class="fa-solid fa-brands fa-instagram"></i>
+       <i class="fa-solid fa-brands fa-twitter"></i>
+       <i class="fa-solid fa-brands fa-snapchat"></i>
+       <p class="footer-text">&copy;COPYRIGHT. ALL RIGHTS RESERVED</p>
+      </div>
+      <small>Created with ❤️ by MBN</small>
     </footer>
   </body>
 </html>

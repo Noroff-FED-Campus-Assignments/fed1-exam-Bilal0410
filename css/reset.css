@@ -20,6 +20,7 @@ html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 100%;
   font-size: 100%;
   vertical-align: baseline;
 }
@@ -40,7 +41,12 @@ a:hover {
 }
 
 body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
   line-height: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 body,
@@ -67,6 +73,123 @@ input {
   outline-offset: 1px;
 }
 
+header {
+    width: 100%;
+    height: auto;
+    background-color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5%;
+}
+.logo {
+    width: 250px;
+}
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.navbar-links li {
+    list-style: none;
+    text-transform: uppercase;
+    font-family: 'Audiowide';
+}
+.navbar-links li a {
+    text-decoration: none;
+    color: #A90619;
+    padding: 1rem;
+    display: block;
+    font-weight: 500;
+}
+.navbar-links li:hover {
+    background-color: #313131;
+}
+.toggle-btn {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+.toggle-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #A90619;
+    border-radius: 10px;
+}
+footer {
+    width: 100%;
+    margin-top: auto;
+    background-color: black;
+}
+.footer-info {
+    text-align: center;
+}
+.footer-text {
+    font-family: 'Audiowide';
+    color: #A90619;
+    margin: 20px;
+    font-size: 14px;
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+}
+.fa-facebook {
+    color: #3863c0;
+    cursor: pointer;
+}
+.fa-instagram {
+    color: #F15F34;
+    cursor: pointer;
+}
+.fa-twitter {
+    color: #4099D3;
+    cursor: pointer;
+}
+.fa-snapchat {
+    color: #F6EA00;
+    cursor: pointer;
+}
+small {
+    color: #A90619;
+    background-color: #313131;
+    font-family: 'Audiowide';
+}
+
+
+@media (max-width: 720px) {
+    .toggle-btn {
+        display: flex;
+    }
+   .navbar-links {
+        width: 100%;
+        display: none;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
 @media (--motionOK) {
   :where(:focus-visible) {
     transition: outline-offset 145ms var(--ease-2);
