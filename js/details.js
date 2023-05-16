@@ -44,3 +44,4 @@ Helper functions
  * @example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
  * @param {item} item The object with properties from the fetched JSON data.
  */
+

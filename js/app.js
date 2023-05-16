@@ -51,3 +51,40 @@ https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#
  * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
  * @param {item} item The object with properties from the fetched JSON data.
  */
+
+ const resultsContainer = document.querySelector(".carousel");
+
+ const postsUrl = "http://fastcars.local/wp-json/wp/v2/posts/";
+ const mediaUrl = "http://fastcars.local/wp-json/wp/v2/media/";
+ 
+ async function fetchBlogs() {
+   try {
+     const postsResponse = await fetch(postsUrl);
+     const posts = await postsResponse.json();
+ 
+     const mediaResponse = await fetch(mediaUrl);
+     const media = await mediaResponse.json();
+ 
+     let html = "";
+     posts.forEach(blog => {
+       const featuredImageId = blog.featured_media;
+       const featuredImage = media.find(image => image.id === featuredImageId);
+       const imageUrl = featuredImage ? featuredImage.source_url : "";
+ 
+       html += `
+       <div class="post">
+         <div class="blogContainer">
+         <a href="/details.html"><img src="${imageUrl}" alt="Featured Image"</a>
+         <h1 class="car-title">${blog.title.rendered}</h1>
+         </div>
+       </div>
+       `;
+     });
+ 
+     resultsContainer.innerHTML = html;
+   } catch (error) {
+     resultsContainer.innerHTML = `Error: ${error}`;
+   }
+ }
+ 
+ fetchBlogs();
