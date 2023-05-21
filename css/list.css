@@ -1,0 +1,19 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .blogContainer {
+    border: 1px solid #ccc;
+    color: black;
+    background-color: black;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .car-title {
+    color: #A90619;
+    font-family: 'Audiowide';
+    font-size: larger;
+    font-size: 30px;
+  }

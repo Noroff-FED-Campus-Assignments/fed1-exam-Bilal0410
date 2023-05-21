@@ -52,12 +52,12 @@ https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#
  * @param {item} item The object with properties from the fetched JSON data.
  */
 
- const resultsContainer = document.querySelector(".carousel");
+ const resultsContainer = document.querySelector(".swiper-wrapper");
 
- const postsUrl = "http://fastcars.local/wp-json/wp/v2/posts/";
+ const postsUrl = "http://fastcars.local/wp-json/wp/v2/posts/?per_page=12";
  const mediaUrl = "http://fastcars.local/wp-json/wp/v2/media/";
  
- async function fetchBlogs() {
+ async function fetchBlogsAndInitializeSwiper() {
    try {
      const postsResponse = await fetch(postsUrl);
      const posts = await postsResponse.json();
@@ -66,25 +66,64 @@ https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#
      const media = await mediaResponse.json();
  
      let html = "";
-     posts.forEach(blog => {
+     posts.forEach((blog) => {
        const featuredImageId = blog.featured_media;
-       const featuredImage = media.find(image => image.id === featuredImageId);
+       const featuredImage = media.find((image) => image.id === featuredImageId);
        const imageUrl = featuredImage ? featuredImage.source_url : "";
+       const title = blog.title.rendered;
  
        html += `
-       <div class="post">
-         <div class="blogContainer">
-         <a href="/details.html"><img src="${imageUrl}" alt="Featured Image"</a>
-         <h1 class="car-title">${blog.title.rendered}</h1>
+         <div class="swiper-slide">
+           <div class="carousel-post">
+             <div class="blogContainer">
+               <a href="/details.html"><img src="${imageUrl}" alt="Featured Image">
+               <h1 class="car-title">${title}</h1></a>
+             </div>
+           </div>
          </div>
-       </div>
        `;
      });
  
      resultsContainer.innerHTML = html;
+ 
+     return { media, posts };
    } catch (error) {
      resultsContainer.innerHTML = `Error: ${error}`;
+     return { error };
    }
  }
  
- fetchBlogs();
+ fetchBlogsAndInitializeSwiper()
+   .then(({ media, posts, error }) => {
+     if (error) {
+       console.error("Error:", error);
+       return;
+     }
+ 
+     console.log("Media:", media);
+     console.log("Posts:", posts);
+ 
+     new Swiper(".swiper-container", {
+       slidesPerView: 4,
+       spaceBetween: 10,
+       loop: true,
+       pagination: {
+         el: '.swiper-pagination',
+         clickable: true
+       },
+       navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+       },
+       autoplay: {
+        delay: 2000,
+        disableOnInteraction: false
+       },
+       touch: {
+        enabled: true
+       }
+     });
+   })
+   .catch((error) => {
+     console.error("Error:", error);
+   });
