@@ -19,6 +19,41 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+.search-form {
+  background: black;
+  width: 600px;
+  display: flex;
+  border-radius: 5px;  
+}
+
+#searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  margin: 2px 0px;
+}
+
+form button {
+  background: black;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  color: #A90619;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+form .fa-search{
+  align-self: center;
+  padding: 10px 20px;
+  color: #A90619;
+}
+
+button:hover {
+  background-color: #ccc;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -37,7 +72,8 @@
     overflow: hidden;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 20px;
   }
   .carousel-post {
     border: 1px solid #ccc;
