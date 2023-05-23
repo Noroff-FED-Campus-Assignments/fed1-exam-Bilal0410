@@ -13,3 +13,76 @@
   border-radius: var(--radius-1);
   box-shadow: var(--shadow-1);
 }
+
+
+.contact-title {
+  font-family: 'Audiowide';
+  text-transform: uppercase;
+  font-size: 46px;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+form {
+  padding: 2em;
+  background: white;
+  border-radius: 1rem;
+}
+input {
+  width: 100%;
+  margin-top: 2px;
+  padding: 10px;
+  font-size: 16px;
+}
+#message {
+  height: 110px;
+}
+
+button {
+  font-family: 'Audiowide';
+  text-transform: uppercase;
+  background: black;
+  color: #A90619;
+  margin: 1rem;
+  border: none;
+  width: 100px;
+  padding: 0.5rem;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.home-btn {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background: black;
+  border: none;
+  width: auto;
+  padding: 0.5rem;
+  color: #A90619;
+  cursor: pointer;
+  border-radius: 0.2rem;
+  border-color: black;
+}
+
+label {
+  display: block;
+  margin: 1rem;
+}
+.form-error {
+  margin: 0 1rem;
+  display: none;
+  color: red;
+  margin-top: -10px;
+}
+
+@media (max-width: 915px) {
+  .home-btn {
+    display: none;
+  }
+}
