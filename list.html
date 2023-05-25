@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
     <link href="/css/reset.css" rel="stylesheet">
     <link href="/css/list.css" rel="stylesheet">
     <script type="module" src="/js/list.js" defer></script>
@@ -36,9 +38,19 @@
     </header>
     <h1>List of Cars</h1>
     <div class="carousel">
-    <div class="post"></div>
+      <form class="search-form" role="search">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search blog posts">
+        <button id="searchButton">Search</button>
   </div>
-  <button class="load-more"></button>
+  <div class="modal-overlay">
+    <div class="modal">
+      <span class="close">&times;</span>
+      <img id="modalImage" src="" alt="Modal Image">
+    </div>
+  </div>
+  <button class="load-more">Click here to load more</button>
+
     <footer>
         <div class="footer-info">
          <a href="/contact.html"><p class="footer-text">CONTACT US</p></a>

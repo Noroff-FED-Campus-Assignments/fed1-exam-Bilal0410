@@ -49,56 +49,55 @@ form .fa-search{
   align-self: center;
   padding: 10px 20px;
   color: #A90619;
+  cursor: pointer;
 }
 
 button:hover {
-  background-color: #ccc;
+  background-color: #313131;
 }
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-.blog {
+.post {
   position: relative;
   overflow: hidden;
+  max-width: 800px;
+  height: 200px;
+  background: black;
+  margin: 0 auto;
   padding: 20px;
 }
-  
-  .swiper-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  .carousel-post {
-    border: 1px solid #ccc;
-    color: black;
-    background-color: black;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
 
-  .post h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-  
-  .post span {
-    display: block;
-    font-style: italic;
-    text-align: right;
-    margin-top: 10px;
-  }
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.carousel-post {
+  color: black;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.post span {
+  display: block;
+  font-style: italic;
+  text-align: right;
+  margin-top: 10px;
+}
 
 .car-title {
-  color: #A90619;
+  color: black;
   font-family: 'Audiowide';
   font-size: larger;
+  text-transform: uppercase;
 }
 
 
@@ -128,14 +127,14 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-    .hero-image {
+  .hero-image {
     width: 100%;
     height: 260px;
-    }
-    .heading {
-        font-size: 48px;
-    }
-    .home-text {
-        font-size: 18px;
-    }
+  }
+  .heading {
+    font-size: 48px;
+  }
+  .home-text {
+    font-size: 18px;
+  }
 }

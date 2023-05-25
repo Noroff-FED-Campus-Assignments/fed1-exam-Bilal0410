@@ -1,79 +1,27 @@
-/*
-============================================
-Constants
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L66
-============================================
-*/
-
-// TODO: Get DOM elements from the DOM
-
-/*
-============================================
-DOM manipulation
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L89
-============================================
-*/
-
-// TODO: Fetch and Render the list to the DOM
-
-// TODO: Create event listeners for the filters and the search
-
-/**
- * TODO: Create an event listener to sort the list.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L91
- */
-
-/*
-============================================
-Data fectching
-@example: https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L104
-============================================
-*/
-
-// TODO: Fetch an array of objects from the API
-
-/*
-============================================
-Helper functions
-https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#L154
-============================================
-*/
-
-/**
- * TODO: Create a function to filter the list of item.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/search-form.html#L135
- * @param {item} item The object with properties from the fetched JSON data.
- * @param {searchTerm} searchTerm The string used to check if the object title contains it.
- */
-
-/**
- * TODO: Create a function to create a DOM element.
- * @example https://github.com/S3ak/fed-javascript1-api-calls/blob/main/src/js/detail.js#L36
- * @param {item} item The object with properties from the fetched JSON data.
- */
-
  const resultsContainer = document.querySelector(".swiper-wrapper");
  const searchInput = document.getElementById("searchInput");
  const searchButton = document.getElementById("searchButton");
  
- const postsUrl = "http://fastcars.local/wp-json/wp/v2/posts/?per_page=12";
- const mediaUrl = "http://fastcars.local/wp-json/wp/v2/media/";
+ const postsUrl = "https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/posts/?per_page=10";
+ const mediaUrl = "https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/media/";
+ const postsPerPage = 12;
+ let currentPage = 1;
  
  let media = [];
  let posts = [];
  
  async function fetchBlogsAndInitializeSwiper() {
    try {
-     const postsResponse = await fetch(postsUrl);
-     posts = await postsResponse.json();
+     const response = await fetch(`${postsUrl}&page=${currentPage}`);
+     posts = await response.json();
  
-     const mediaResponse = await fetch(mediaUrl);
-     media = await mediaResponse.json();
+     const featuredImageIds = posts.map((post) => post.featured_media);
+     const featuredImagesResponse = await fetch(`${mediaUrl}?include=${featuredImageIds.join(",")}`);
+     media = await featuredImagesResponse.json();
  
      renderPosts(posts);
  
      searchInput.removeEventListener("input", handleSearchInput);
- 
      searchInput.addEventListener("input", handleSearchInput);
  
      return { media, posts };
@@ -100,10 +48,10 @@ https://github.com/S3ak/fed-javascript1-api-calls/blob/main/examples/games.html#
      html += `
        <div class="swiper-slide">
          <div class="carousel-post">
-           <div class="blogContainer">
-             <a href="/details.html"><img src="${imageUrl}" alt="Featured Image"></a>
+           <a href="/details.html?id=${blog.id}">
+             <img src="${imageUrl}" alt="Featured Image">
              <h1 class="car-title">${title}</h1>
-           </div>
+           </a>
          </div>
        </div>
      `;
