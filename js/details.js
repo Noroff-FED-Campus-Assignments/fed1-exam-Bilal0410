@@ -50,7 +50,7 @@ Helper functions
  const params = new URLSearchParams(queryString);
  const id = params.get("id");
  
- const postsUrl = `http://fastcars.local/wp-json/wp/v2/posts/${id}`;
+ const postsUrl = `https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/posts/${id}`;
  
  async function fetchPosts() {
    try {
