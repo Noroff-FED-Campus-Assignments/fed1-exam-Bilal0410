@@ -39,41 +39,48 @@ const mediaUrl = "https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/media/";
 
 const postsPerPage = 10;
 let currentPage = 1;
+let posts = []; // Array to store fetched posts
+let media = []; // Array to store fetched media
 
 async function fetchBlogs() {
   try {
     const response = await fetch(`${postsUrl}?per_page=${postsPerPage}&page=${currentPage}`);
-    const posts = await response.json();
+    posts = await response.json();
 
     const featuredImageIds = posts.map(blog => blog.featured_media);
     const mediaResponse = await fetch(`${mediaUrl}?include=${featuredImageIds.join(",")}`);
-    const media = await mediaResponse.json();
+    media = await mediaResponse.json();
 
-    let html = "";
-    posts.forEach(blog => {
-      const featuredImageId = blog.featured_media;
-      const featuredImage = media.find(image => image.id === featuredImageId);
-      const imageUrl = featuredImage ? featuredImage.source_url : "";
-
-      html += `
-        <div class="post">
-          <img src="${imageUrl}" alt="Featured Image" class="car-img">
-          <a href="/details.html?id=${blog.id}">
-            <h1 class="car-title">${blog.title.rendered}</h1>
-          </a>
-        </div>
-      `;
-    });
-
-    resultsContainer.innerHTML += html;
-
-    if (posts.length >= postsPerPage) {
-      loadMoreButton.style.display = "block";
-    } else {
-      loadMoreButton.style.display = "none";
-    }
+    displayPosts(posts);
   } catch (error) {
     resultsContainer.innerHTML = `Error: ${error}`;
+  }
+}
+
+// Function to display the posts
+function displayPosts(posts) {
+  let html = "";
+  posts.forEach(blog => {
+    const featuredImageId = blog.featured_media;
+    const featuredImage = media.find(image => image.id === featuredImageId);
+    const imageUrl = featuredImage ? featuredImage.source_url : "";
+
+    html += `
+      <div class="post">
+        <img src="${imageUrl}" alt="Featured Image" class="car-img">
+        <a href="/details.html?id=${blog.id}">
+          <h1 class="car-title">${blog.title.rendered}</h1>
+        </a>
+      </div>
+    `;
+  });
+
+  resultsContainer.innerHTML += html;
+
+  if (posts.length >= postsPerPage) {
+    loadMoreButton.style.display = "block";
+  } else {
+    loadMoreButton.style.display = "none";
   }
 }
 

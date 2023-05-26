@@ -24,15 +24,6 @@ html {
     box-sizing: inherit;
   }
   
-  a {
-    color: #646cff;
-    text-decoration: inherit;
-  }
-  
-  a:hover {
-    color: #535bf2;
-  }
-  
   body {
     padding: 0;
     margin: 0;
@@ -41,7 +32,7 @@ html {
     display: flex;
     flex-direction: column;
   }
-  
+ 
   body,
   p,
   h1,
@@ -53,9 +44,10 @@ html {
     margin: 0;
   }
   
-  img {
-    max-width: 100%;
-    height: auto;
+ 
+  .wp-block-image {
+    justify-content: center;
+    width: auto;
   }
   
   input {
@@ -88,16 +80,11 @@ html {
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
-    font-size: 70px;
-  }
-  img {
-    width: 100%;
-    height: auto;
+    font-size: 30px;
   }
   p {
     text-align: center;
     justify-content: center;
-    padding: 0 100px;
   }
  
   @media (--motionOK) {
