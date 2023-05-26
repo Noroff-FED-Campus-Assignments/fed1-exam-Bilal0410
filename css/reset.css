@@ -130,12 +130,13 @@ footer {
 }
 .footer-info {
     text-align: center;
+    font-size: 12px;
 }
 .footer-text {
     font-family: 'Audiowide';
     color: #A90619;
     margin: 20px;
-    font-size: 14px;
+    font-size: 12px;
 }
 .footer-logo {
     width: 200px;
