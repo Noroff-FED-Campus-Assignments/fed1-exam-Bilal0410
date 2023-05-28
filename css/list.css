@@ -38,12 +38,13 @@ p {
   }
   .car-img {
     cursor: pointer;
+    width: auto;
   }
   .car-title {
     color: #A90619;
     font-family: 'Audiowide';
     font-size: larger;
-    font-size: 30px;
+    font-size: 18px;
   }
   .load-more {
     font-family: 'Audiowide';
@@ -122,4 +123,28 @@ p {
     font-size: 50px;
     cursor: pointer;
     color: #fff;
+  }
+
+  @media (min-width: 1000px) {
+    h1 {
+      font-size: 70px;
+    }
+    p {
+      font-size: 18px;
+      margin: 0 8%;
+    }
+    h2 {
+      font-size: 44px;
+    }
+    .post {
+      margin: 2% 20%;
+    }
+    .car-title {
+      font-size: 22px;
+    }
+    .load-more {
+      width: 400px;
+      height: 80px;
+      font-size: 22px;
+    }
   }

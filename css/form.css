@@ -23,11 +23,15 @@
 .contact-title {
   font-family: 'Audiowide';
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
+  margin: 10px 0;
 }
 p {
+  font-family: 'inter', sans-serif;
+  font-size: 14px;
   text-align: center;
+  margin: 0 5px;
 }
 .container {
   max-width: 700px;
@@ -42,7 +46,7 @@ input {
   width: 100%;
   margin-top: 2px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 12px;
 }
 #message {
   height: 110px;
@@ -50,6 +54,7 @@ input {
 
 button {
   font-family: 'Audiowide';
+  font-size: 14px;
   text-transform: uppercase;
   background: black;
   color: #A90619;
@@ -61,36 +66,49 @@ button {
   cursor: pointer;
   border-radius: 4px;
 }
-.home-btn {
-  position: absolute;
-  top: auto;
-  left: 0;
-  background: black;
-  border: none;
-  width: auto;
-  padding: 0.5rem;
-  color: #A90619;
-  cursor: pointer;
-  border-radius: 0.2rem;
-  border-color: black;
-}
+
 button:hover {
   background-color: #313131;
 }
 
 label {
+  font-family: 'inter' sans-serif;
   display: block;
   margin: 1rem;
+  font-size: 14px;
 }
 .form-error {
+  font-family: 'inter', sans-serif;
+  font-size: 14px;
   margin: 0 1rem;
   display: none;
   color: red;
   margin-top: -10px;
 }
 
-@media (max-width: 915px) {
-  .home-btn {
-    display: none;
+@media (min-width: 1000px) {
+  .contact-img {
+    height: 500px;
+  }
+  .contact-title {
+    font-size: 70px;
+  }
+  p {
+    font-size: 18px;
+  }
+  label {
+    font-size: 18px;
+  }
+  input {
+    font-size: 18px;
+    height: 50px;
+  }
+  button {
+    width: 120px;
+    height: 45px;
+    font-size: 18px;
+  }
+  .form-error {
+    font-size: 16px;
   }
 }

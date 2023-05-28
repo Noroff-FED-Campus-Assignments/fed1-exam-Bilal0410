@@ -29,3 +29,20 @@ p {
     flex-direction: column;
     gap: 20px;
 }
+
+@media (min-width: 1000px) {
+    .about-img {
+        height: 500px;
+        width: auto;
+    }
+    h1 {
+        font-size: 70px;
+    }
+    p {
+        font-size: 18px;
+        margin: 0 8%;
+    }
+    h2 {
+        font-size: 44px;
+    }
+}

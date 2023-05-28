@@ -176,6 +176,7 @@ small {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        font-size: 20px;
     }
     .navbar-links ul {
         width: 100%;
@@ -189,6 +190,19 @@ small {
     }
     .navbar-links.active {
         display: flex;
+}
+}
+
+@media (min-width: 750px) {
+    .navbar {
+      font-size: 18px;
+    }
+     
+    .footer-text {
+      font-size: 18px;
+    }
+    .fa-brands {
+      font-size: 18px;
     }
 }
 @media (--motionOK) {
@@ -197,5 +211,21 @@ small {
   }
   :where(:not(:active):focus-visible) {
     transition-duration: 0.25s;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    font-size: 20px;
+  }
+  .footer-text {
+    font-size: 18px;
+  }
+  .footer-logo {
+    width: 350px;
+    height: 40px;
+  }
+  .fa-brands {
+    font-size: 20px;
   }
 }

@@ -77,12 +77,17 @@
  
  function initializeSwiper() {
    new Swiper(".swiper-container", {
-     slidesPerView: 4,
+     slidesPerView: 2,
      spaceBetween: 10,
      loop: true,
      pagination: {
        el: ".swiper-pagination",
        clickable: true
+     },
+     breakpoints: {
+      720: {
+        slidesPerView: 4
+      }
      },
      navigation: {
        nextEl: ".swiper-button-next",
