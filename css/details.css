@@ -1,0 +1,121 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 300;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+ 
+  .wp-block-image {
+    justify-content: center;
+  }
+  
+  input {
+    outline-offset: 1px;
+  }
+  
+  :where(:not(:active):focus-visible) {
+    outline-offset: 1px;
+  }
+  
+.back-btn {
+    font-family: 'Audiowide';
+    text-transform: uppercase;
+    background: black;
+    border: none;
+    width: auto;
+    padding: 0.5rem;
+    margin-top: 10px;
+    color: #A90619;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    border-color: black;
+  }
+  button:hover {
+    background-color: #313131;
+  }
+ 
+  h1 {
+    font-family: 'Audiowide';
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+  }
+  p {
+    font-family: 'inter', sans-serif;
+    text-align: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 10px 0;
+  }
+  
+  @media (min-width: 1000px) {
+    .back-btn {
+      width: 190px;
+      height: 40px;
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    ul li {
+      font-size: 18px;
+    }
+    p {
+      font-size: 18px;
+      padding: 10px 50px;
+    }
+    .wp-block-image {
+      padding: 0 15%;
+    }
+  }
+
+  @media (--motionOK) {
+    :where(:focus-visible) {
+      transition: outline-offset 145ms var(--ease-2);
+    }
+    :where(:not(:active):focus-visible) {
+      transition-duration: 0.25s;
+    }
+  }
+  

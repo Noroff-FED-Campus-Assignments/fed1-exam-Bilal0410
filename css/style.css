@@ -1,0 +1,162 @@
+.hero-image {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+    background: url(/assets/hero-img.jpg) no-repeat center;
+    background-size: cover;
+}
+.heading {
+    font-family: 'Audiowide';
+    font-size: 40px;
+    text-align: center;
+    margin-top: 10px;
+}
+p {
+  font-family: 'inter', sans-serif;
+  margin: 5px;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.list-heading {
+  font-family: 'Audiowide';
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 10px 0;
+}
+.search-form {
+  background: black;
+  width: auto;
+  display: flex;
+  border: none;
+  border-radius: 10px solid; 
+  padding: 2px;
+}
+
+#searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  margin: 2px 0px;
+}
+
+img {
+  height: auto;
+  width: auto;
+}
+form .fa-search{
+  align-self: center;
+  padding: 10px 20px;
+  color: #A90619;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #313131;
+}
+.post {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  height: 200px;
+  background: black;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: auto;
+}
+.carousel-post {
+  color: black;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.post h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.post span {
+  display: block;
+  font-style: italic;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.car-title {
+  color: black;
+  font-family: 'Audiowide';
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -20px;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+@media (min-width: 600px) {
+  .heading {
+    font-size: 48px;
+  }
+  .home-text {
+    font-size: 18px;
+  }
+  .list-heading {
+    font-size: 30px;
+  }
+  .car-title {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .heading {
+    font-size: 70px;
+  }
+  .home-text {
+    font-size: 20px;
+  }
+  .list-heading {
+    font-size: 44px;
+  }
+  .search-form {
+    margin: 0 20%;
+    border-radius: 10px solid;
+    height: 48px;
+  }
+  .car-title {
+    font-size: 18px;
+  }
+}

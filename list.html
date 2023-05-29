@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog posts list page" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
+    <link href="/css/reset.css" rel="stylesheet">
+    <link href="/css/list.css" rel="stylesheet">
+    <script type="module" src="/js/list.js" defer></script>
+    <script type="module" src="/js/menu.js" defer></script>
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:3508597,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+    <title>FastCars - Blog page</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+         <a class="logo" href="/index.html"><img src="/assets/logo.png" alt="logo with wheel and name"></a>
+         <a href="#" class="toggle-btn">
+           <span class="bar"></span>
+           <span class="bar"></span>
+           <span class="bar"></span>
+         </a>
+         <div class="navbar-links">
+           <ul>
+             <li><a href="/index.html">Home</a></li>
+             <li><a href="/list.html">Reviews</a></li>
+             <li><a href="/about.html">About</a></li>
+             <li><a href="/contact.html">Contact</a></li>
+           </ul>
+         </div>
+        </nav>
+    </header>
+    <main>
+      <h1>Our Car Reviews</h1>
+      <p>Join us as we uncover the hidden gems, explore the latest innovations, and delve into the legacies of iconic brands that define the realm of fast luxury cars. 
+        From the awe-inspiring acceleration to the plush interiors that cocoon you in comfort, we will guide you through a journey of discovery and help you make informed choices in this exhilarating world.</p>
+        <p>We believe that luxury cars are not just modes of transportation but works of art that embody the pinnacle of engineering, craftsmanship, and innovation. Our mission is to bring you closer to the essence of luxury, showcasing the exceptional design, superior performance, and cutting-edge technologies that define these remarkable automobiles.</p>
+        <h2>List of Cars</h2>
+      <div class="carousel">
+        <form class="search-form" role="search">
+        </form>
+      </div>
+      <div class="modal-overlay">
+        <div class="modal">
+          <span class="close">&times;</span>
+          <img id="modalImage" src="" alt="Modal Image">
+        </div>
+      </div>
+      <button class="load-more">Click here to load more</button>
+    </main>
+    <footer>
+        <div class="footer-info">
+         <a href="/contact.html"><p class="footer-text">CONTACT US</p></a>
+         <a href="/about.html"><p class="footer-text">ABOUT</p></a>
+         <p class="footer-text">MØLLERPARKEN 4, 0459 OSLO</p>
+         <a href="#"><img class="footer-logo" src="/assets/logo.png" alt="wheel logo"></a>
+         <p class="footer-text">THIS WEBSITE WAS CREATED FOR EDUCATIONAL PURPOSES</p>
+         <p class="footer-text">SOCIAL MEDIA</p>
+         <i class="fa-solid fa-brands fa-facebook"></i>
+         <i class="fa-solid fa-brands fa-instagram"></i>
+         <i class="fa-solid fa-brands fa-twitter"></i>
+         <i class="fa-solid fa-brands fa-snapchat"></i>
+         <p class="footer-text">&copy;COPYRIGHT. ALL RIGHTS RESERVED</p>
+        </div>
+        <small>Created with ❤️ by MBN</small>
+      </footer>
+</body>
+</html>

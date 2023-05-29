@@ -1,0 +1,48 @@
+.about-img {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    background: url(/assets/about-img.jpeg) no-repeat center;
+    background-size: cover;
+}
+h1 {
+    font-family: 'Audiowide';
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+h2 {
+    font-family: 'Audiowide';
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+p {
+    font-size: 12px;
+}
+.about-text {
+    font-family: 'inter', sans-serif;
+    text-align: center;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 1000px) {
+    .about-img {
+        height: 500px;
+        width: auto;
+    }
+    h1 {
+        font-size: 70px;
+    }
+    p {
+        font-size: 18px;
+        margin: 0 8%;
+    }
+    h2 {
+        font-size: 44px;
+    }
+}
