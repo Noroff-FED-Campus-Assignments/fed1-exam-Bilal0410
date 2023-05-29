@@ -10,10 +10,8 @@ This project was bootstrapped with Vite.
 
 ## Resources
 
-<!-- You must replace these links -->
-
 - [Brief](https://fed-vocational-astro-course.vercel.app/en/exam-1/brief)
-- [Design](_LINK_TO_FIGMA_)
+- [Design](https://www.figma.com/file/LxTtKtDYGsgn26KnthRJFc/FASTCARS---PROJECT-EXAM-1?type=design&node-id=0%3A1&t=6Pjwe92CQ7OyFhxj-1)
 - [Production deploy](_LINK_TO_WEBSITE_)
 - [Deployment CI](_LINK_TO_NETLIFY_VERCEL_DASHBOARD_)
 - [API Docs](_LINK_TO_API_DOCS_)
@@ -224,5 +222,5 @@ Make sure you go through this checklist before submitting your project to Moodle
 
 ## Authors
 
-- _YOURE_NAME_ (@_your_github_username_)
+- Mohammad Bilal Naz (@Bilal0410)
 - Monde Sineke (@S3ak)
