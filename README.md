@@ -28,6 +28,8 @@ YOu can update your deployment pipeling by editing the [vercel.json](https://ver
 
 ## Report
 
+POJECT EXAM 1 REPORT
+
 For this project exam, I chose to create a blog page about cars. The idea was to develop a review platform for luxury fast cars, so I named my page "FastCars." To maintain a consistent theme, I selected a black and red color combination as the main colors for my page. I created the logo for the page using an app and based the rest of the design on those colors. The font "Audiowide" appeared aesthetically pleasing for my logo, so I used it as the primary font for the entire site. This font is applied to the navigation bar, footer text, and all the headings on the site. Additionally, I carefully selected hero images that complemented the different pages on my site.
 
 The header includes a menu button for smaller screens, referred to as the toggleButton. The code for the menu button initializes event listeners to handle the toggle button and enables horizontal scrolling within the blog containers. It ensures that the navigation links can be shown or hidden when the toggle button is clicked, and it provides functionality to navigate between different sections within the blog containers.
@@ -41,6 +43,59 @@ For my details page, I began by selecting the HTML elements with corresponding I
 To validate the contact form, the code selects form elements and corresponding error elements using the "querySelector" method. The "validateForm" function is called when the form is submitted. It checks the length and validity of each input field using helper functions and displays or hides error messages accordingly. If all validations pass, a success alert is shown, and the form is reset. If the requirements are not met, the user will see a red text underneath the input tag, indicating how to validate the forms. The "checkLength" function trims the input value and checks its length, while the "validateEmail" function uses a regular expression to validate an email address. Lastly, an event listener is added to the name input field to validate its value when blurred.
 
 Regarding my search form and slider on the home page, there are occasional bugs. Despite reviewing the code multiple times and seeking assistance from ChatGBT to resolve the issue, the AI indicated that there was nothing wrong with the code. Occasionally, the search input may target the same search exactly, but subsequent attempts might not yield the same targeted blog post. The slider sometimes hangs up and moves forward and backward unexpectedly. I attempted to fix this problem but was unable to find a solution.
+
+For my hotjar installation I interviewed a friend of mine and asked what I could possibly improve. The respond I got was to make it even more responsive and to make the css better for each page. I then made media queries and improved my css for each page till I was satisfied with the changes.
+
+SOURCES
+
+Home page image:
+https://www.astonmartinchicago.com/aston-martin-luxury-sports-cars.htm
+
+About page image:
+https://en.wikipedia.org/wiki/Supercar#/media/File:Supercar_Lineup_(18092106572).jpg
+
+Contact page image:
+https://unsplash.com/photos/OJX7gIU3E6U
+
+
+BLOG LIST IMAGES
+
+Chevrolet Corvette Stingray:
+https://www.caranddriver.com/news/a29358931/2020-chevrolet-corvette-build-price-spec/ - Author: Eric Tingwall.
+
+Maserati Levante:
+https://www.cnet.com/roadshow/reviews/2022-maserati-levante-trofeo-3-8l-review/ - Author: Andrew Krok.
+
+Bentley Continental GT:
+https://www.cnet.com/roadshow/pictures/2022-bentley-continental-gt-speed-coupe/ - Author: Daniel Golson.
+
+Aston Martin DB11:
+https://unsplash.com/photos/hXK7sCKTWB0 - Author: Alexandru Ivanov.
+
+Lamborghini Huracan Evo:
+https://www.caranddriver.com/reviews/a33978640/2020-lamborghini-huracan-evo-rwd-drive/ - Author: Scott Oldham.
+
+Rolls-Royce Ghost:
+https://www.motor1.com/news/612579/rolls-ghost-black-badge-spofec/ - Author: Anthony Alaniz.
+
+Jaguar F-Type:
+https://www.motortrend.com/cars/jaguar/f-type/ - Author: MotorTrend.
+
+
+Porsche 911 Carrera:
+https://bil24.no/endelig-onskes-nye-gts-velkommen-i-911-familien/ - Author: Bil24.
+
+Tesla Model 3:
+https://e-vehicleinfo.com/fastest-electric-cars-by-top-speed-range-india/ - Author: Electric Vehicle Info.
+
+Audi A4:
+https://moller.no/no/nyhetsrom/nye-audi-a4-sportsligere-og-skarpere - Author: Moller.
+
+BMW 3-Series:
+https://www.autotrader.com/comparisons/2022-bmw-3-series-choosing-the-right-trim - Author: Russ Heaps.
+
+Mercedes-Benz A-Class:
+https://carbuzz.com/cars/mercedes-benz/a-class - Author: Carbuzz.
 
 ## Getting Started
 
