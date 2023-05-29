@@ -4,34 +4,26 @@ const modalOverlay = document.querySelector(".modal-overlay");
 const modalCloseButton = document.querySelector(".close");
 const modalImage = document.querySelector("#modalImage");
 
-// Function to handle image click
 function handleImageClick(event) {
   event.preventDefault();
 
-  // Get the clicked image source URL
   const clickedImageSrc = event.target.src;
 
-  // Update the modal image source URL
   modalImage.src = clickedImageSrc;
 
-  // Show the modal
   modalOverlay.style.display = "block";
 }
 
-// Function to handle modal close button click
 function handleModalCloseClick() {
-  // Hide the modal
   modalOverlay.style.display = "none";
 }
 
-// Add event listener to each image in the carousel
 resultsContainer.addEventListener("click", function(event) {
   if (event.target.classList.contains("car-img")) {
     handleImageClick(event);
   }
 });
 
-// Add event listener to modal close button
 modalCloseButton.addEventListener("click", handleModalCloseClick);
 
 const postsUrl = "https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/posts/";
@@ -39,8 +31,8 @@ const mediaUrl = "https://fastcars-mbn.flywheelsites.com/wp-json/wp/v2/media/";
 
 const postsPerPage = 10;
 let currentPage = 1;
-let posts = []; // Array to store fetched posts
-let media = []; // Array to store fetched media
+let posts = [];
+let media = [];
 
 async function fetchBlogs() {
   try {
@@ -57,7 +49,6 @@ async function fetchBlogs() {
   }
 }
 
-// Function to display the posts
 function displayPosts(posts) {
   let html = "";
   posts.forEach(blog => {
